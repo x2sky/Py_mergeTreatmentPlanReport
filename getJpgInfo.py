@@ -10,7 +10,7 @@ DESCRIPTION
 EXAMPLES
     examples of each function
     
-VERSION 0.0
+VERSION 0.1
 AUTHOR
     Becket Hui 2020 10
     
@@ -37,7 +37,7 @@ class ImgInfo:
                 self.fileName = filePath
                 self.type = im.format
                 fName = os.path.basename(filePath)
-                ptName = re.search('(.*?)sc.jpg', fName)  # use the file name ('ptname'sc.jpg) to determine pt name
+                ptName = re.search('(.*?)sc[0-9]*.jpg', fName)  # use the file name ('ptname'sc(#).jpg) to determine pt name
                 self.patient = ptName.group(1)
                 self.modifiedTime = datetime.fromtimestamp(os.path.getmtime(filePath))
                 return True

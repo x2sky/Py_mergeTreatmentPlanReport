@@ -12,7 +12,7 @@ EXAMPLES
     main(srcFolderPath, mergFolderPath): Compile list of plan files and merge the appropriate files together
     mergeBrachyPlanFile(ptPdfInfos, ptJpgInfos, mergFolderPath): combine the brachy plan files into a merged file
     
-VERSION 0.0
+VERSION 0.1
 AUTHOR
     Becket Hui 2020 10
     
@@ -95,14 +95,14 @@ def mergeBrachyPlanFile(ptPdfInfos, ptJpgInfos, mergFolderPath):
         print('%s  --Cannot find the DVH file within 5 hours time frame.' % datetime.now().strftime('%m/%d %H:%M'))
         mergPdf.close()
         return
-    # find plan image
+    # find plan image(s), can merge multiple images
     for imgInfo in ptJpgInfos:
         if abs(plnTime - imgInfo.modifiedTime) < timedelta(hours=5):
-            findImgFile = imgInfo.convertPdf()
-            break
-    if findImgFile:
-        mergPdf.append(findImgFile)
-    else:
+            imgFilePath = imgInfo.convertPdf()
+            if imgFilePath:
+                mergPdf.append(imgFilePath)
+                findImgFile = True
+    if findImgFile == False:
         print('%s  --Cannot find the image file within 5 hours time frame.' % datetime.now().strftime('%m/%d %H:%M'))
         mergPdf.close()
         return
