@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "mergePlanReport", "mergePlanReport.pyproj", "{44F2A47F-9D02-4075-9F05-1710BE6EF29A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44F2A47F-9D02-4075-9F05-1710BE6EF29A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44F2A47F-9D02-4075-9F05-1710BE6EF29A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {474AA35D-0F2F-475C-A237-502FF5C6D0A0}
+	EndGlobalSection
+EndGlobal

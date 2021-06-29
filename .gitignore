@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/__pycache__
+/dist
+/build/mergePdf
+/.vs
+/.idea
+*.vcxproj
+/mergePdf.spec
+/mergePlanReport-env

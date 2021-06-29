@@ -127,7 +127,7 @@ def mergeBrachyPlanFile(ptPdfInfos, ptJpgInfos, mergFolderPath):
 
 
 if __name__ == '__main__':
-    folderCurr = os.path.dirname(__file__)
+    folderCurr = os.getcwd()
     settingFile = os.path.join(folderCurr, 'mergePdfSetting.txt')  # read the source folder from setting file
     try:
         filePtr = open(settingFile, 'r')
